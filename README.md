@@ -17,15 +17,14 @@ var releaser = require('releaser');
 
 // init instcance
 var version = new releaser({
-    devider: '.',
-    step: 10
+    devider: '.'
 });
 
 // update version
 var newVesion = version.up(); // up to 0.0.1
 
-// fetch version detail
-var details = version.detail();
+// version detail
+console.log(version);
 
 // details look like:
 {

@@ -10,6 +10,7 @@
 var _ = require('underscore');
 
 var make = function(params) {
+    // 只针对十进制适用：
     var self = params ? params : this;
     var v = _.values(new String(params.raw));
     if (v.length < 3) {
@@ -26,28 +27,20 @@ var make = function(params) {
     // return [first,middle,last].join(self.divider);
 };
 
-// xxx@0.1.1-cooker-turing.png
 var Version = function(params) {
     this.created = new Date();
     this.divider = params && params.divider ? params.divider: '.';
     this.step = params && params.step ? params.step : 10;
     this.raw = params && params.raw ? params.raw: 0;
     this.version = make(this);
+    return this;
 };
 
 // update version
 Version.prototype.up = function() {
     this.raw++;
     this.version = make(this);
-};
-
-Version.prototype.ver = function() {
     return this.version;
-}
-
-// fetch detail
-Version.prototype.detail = function() {
-    return this;
 };
 
 module.exports = Version;
