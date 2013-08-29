@@ -1,28 +1,27 @@
-// 执行各个功能点测试
 var version = require('./index'),
     should = require('should');
 
-describe('Available', function() {
-    it('should return a available list', function() {
-        var list = main.available();
-        list.should.be.an.instanceof(Array)
+describe('makeVersionString', function() {
+    it('should return a version string', function() {
+        var v1 = new version(),
+            v2 = new version({raw: 100}),
+            v3 = new version({divider: '-'}),
+            s1 = v1.ver(),
+            s2 = v2.ver(),
+            s3 = v3.ver();
+        s1.should.equal('0.0.0');
+        s2.should.equal('1.0.0');
+        s3.should.equal('0-0-0');
     });
 });
 
-// describe('Fetch', function() {
-//     it('should fetch a ascii emoticon from right type', function() {
-//         var type = 'laugh';
-//         var type2 = '摊手';
-//         (store.list[type].indexOf(main.fetch(type))).should.be.above(-1);
-//         (store.list[type2].indexOf(main.fetch(type2))).should.be.above(-1);
-//     });
-// });
-
-// describe('Check', function() {
-//     it('should check type right', function() {
-//         var type = store.check('fajesqsqwsq'),
-//             type2 = store.check('laugh');
-//         type.should.equal(false);
-//         type2.should.equal(true);
-//     });
-// });
+describe('updateVersion', function() {
+    it('should return a updated version string', function() {
+        var v1 = new version();
+        v1.up();
+        var s1 = v1.ver();
+        s1.should.equal('0.0.1');
+        v1.up();
+        v1.ver().should.equal('0.0.2');
+    });
+});
