@@ -1,0 +1,25 @@
+{
+  "name": "releaser",
+  "version": "0.0.0",
+  "description": "a simple and sexy version-maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turingou/releaser.git"
+  },
+  "keywords": [
+    "version"
+  ],
+  "author": "turing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/releaser/issues"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}
