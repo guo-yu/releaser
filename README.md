@@ -29,8 +29,7 @@ console.log(version);
 // details look like:
 {
   created: [Date],
-  raw: 2,
-  step: 10,
+  number: 2,
   version: '0.0.1',
   divider: '.'
 }
