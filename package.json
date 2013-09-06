@@ -1,22 +1,22 @@
 {
-  "name": "releaser",
+  "name": "releaser-coffee",
   "version": "0.0.4",
-  "description": "a simple and smart version-maker",
+  "description": "a simple and smart version-maker written in cofeescript",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/turingou/releaser.git"
+    "url": "https://github.com/maxmert/releaser.git"
   },
   "keywords": [
     "version"
   ],
-  "author": "turing",
+  "author": "maxmert",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turingou/releaser/issues"
+    "url": "https://github.com/maxmert/releaser/issues"
   },
   "devDependencies": {
     "mocha": "*",
