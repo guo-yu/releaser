@@ -26,7 +26,6 @@ makeFromRaw = (params) ->
 	# last = (self.raw / self.step) >= 1 ? self.raw % self.step : self.raw;
 	# return [first,middle,last].join(self.divider);
 
-
 makeFromString = (params) ->
 
 	self = (if params then params else this)
@@ -51,10 +50,6 @@ Version = (params) ->
 	else
 		@number = 0
 		@version = makeFromRaw(this)
-	
-
-
-
 
 # update version
 Version::up = ->
