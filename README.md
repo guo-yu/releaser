@@ -20,6 +20,11 @@ var version = new releaser({
     devider: '.'
 });
 
+// init from string
+var versionNumber = new releaser({
+    version: "0.1.4"
+}).number;
+
 // update version
 var newVesion = version.up(); // up to 0.0.1
 
