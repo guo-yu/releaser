@@ -1,10 +1,10 @@
 {
   "name": "releaser",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "a simple and smart version-maker written in cofeescript",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./test.js"
+    "test": "node_modules/mocha/bin/mocha ./test.js"
   },
   "repository": {
     "type": "git",
